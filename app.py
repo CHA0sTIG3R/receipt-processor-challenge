@@ -1,5 +1,3 @@
-from datetime import datetime
-import math
 import uuid
 from flask import Flask, abort, request, jsonify
 from openapi_core import OpenAPI
@@ -23,11 +21,6 @@ def receipt_processor(receipt_data):
     Keyword arguments: receipt_data
     Return: returns generated key for the point storage
     """
-    # retailer = receipt_data['retailer']
-    # purchase_date = receipt_data['purchaseDate']
-    # purchase_time_str = receipt_data['purchaseTime']
-    # items = receipt_data['items']
-    # total_value = float(receipt_data['total'])
     receipt_data['total'] = float(receipt_data['total'])
     
     storage_id = str(uuid.uuid4())
@@ -52,7 +45,8 @@ def process_receipts():
 @openapi_validated
 def get_points(id):
     valid_id = request.openapi.parameters.path['id']
-    print(valid_id, type(valid_id))
+    
+    # check if id in storage
     if valid_id not in RECEIPT_STORAGE:
         abort(404, description="No receipt found for that id")
     

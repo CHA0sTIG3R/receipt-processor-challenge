@@ -67,18 +67,11 @@ def calculate_points(receipt_data: Dict[str, Any]) -> int:
 
     # Aggregate points from all rules
     total_points = 0
-    print(total_points)
     total_points += points_for_retailer_name(receipt_data['retailer'])
-    print(total_points)
     total_points += points_for_purchase_day(receipt_data['purchaseDate'])
-    print(total_points)
     total_points += points_for_purchase_time(receipt_data['purchaseTime'])
-    print(total_points)
     total_points += points_for_item_count(items)
-    print(total_points)
     total_points += points_for_item_description_length(items)
-    print(total_points)
     total_points += points_for_total(receipt_data['total'])
-    print(total_points)
 
     return total_points

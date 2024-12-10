@@ -1,3 +1,70 @@
+## Getting Started
+
+### Prerequisites
+
+- Python 3.12.2+
+- Git
+
+### Clone the Repository
+
+Clone this repository to your local machine using the following command:
+
+```sh
+git clone https://github.com/CHA0sTIG3R/receipt-processor-challenge.git
+cd receipt-processor-challenge
+```
+
+## Set Up Virtual Environment
+
+1. **Navigate to the repository directory:**
+
+   ```sh
+   cd your-repo
+   ```
+
+2. **Create a virtual environment:**
+   - On Windows:
+
+     ```sh
+     py -m venv env
+     ```
+
+   - On macOS and Linux:
+
+     ```sh
+     python3 -m venv env
+     ```
+
+3. **Activate the virtual environment:**
+   - On Windows:
+
+     ```sh
+     env\Scripts\activate
+     ```
+
+   - On macOS and Linux:
+
+     ```sh
+     source env/bin/activate
+     ```
+
+## Install Dependencies
+
+While the virtual environment is active, install the project dependencies using pip:
+
+```sh
+pip install -r requirements.txt
+```
+
+To start the Flask app:
+
+```sh
+python app.py
+```
+
+<details>
+<summary>Exercise Instructions</summary>
+
 # Receipt Processor
 
 Build a webservice that fulfils the documented API. The API is described below. A formal definition is provided 
@@ -171,3 +238,4 @@ the reviewing engineer.
 ### How long do I have to complete the exercise?
 There is no time limit for the exercise. Out of respect for your time, we designed this exercise with the intent that it should take you a few hours. But, please
 take as much time as you need to complete the work.
+</details>
