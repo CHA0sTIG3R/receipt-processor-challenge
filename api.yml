@@ -82,7 +82,7 @@ components:
                 purchaseTime:
                     description: The time of the purchase printed on the receipt. 24-hour time expected.
                     type: string
-                    pattern: "^\\d{2}:\\d{2}$"
+                    format: time
                     example: "13:01"
                 items:
                     type: array
