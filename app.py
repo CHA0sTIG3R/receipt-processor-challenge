@@ -48,7 +48,7 @@ def get_points(id):
     
     # check if id in storage
     if valid_id not in RECEIPT_STORAGE:
-        abort(404, description="No receipt found for that id")
+        abort(404, description="Receipt Not Found - process it first")
     
     points = calculate_points(RECEIPT_STORAGE[valid_id])
         

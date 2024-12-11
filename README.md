@@ -62,6 +62,10 @@ To start the Flask app:
 python app.py
 ```
 
+## Notice
+
+*In the [API](api.yml) specification, I noticed that the time format and the samples provided directly conflicts each other. I don't know if this was intentional or not. At first, I wanted to make changes to it but decided to modify the test samples and write this here instead. It's just a small change to the "purchaseDate" which is to include seconds*
+
 <details>
 <summary>Exercise Instructions</summary>
 
